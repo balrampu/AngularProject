@@ -1,0 +1,51 @@
+# Angular build artifacts
+dist/
+out-tsc/
+.angular/
+
+# Node dependencies
+node_modules/
+
+# Environment files
+src/environments/environment*.ts
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Compiled TypeScript
+*.js
+*.js.map
+*.d.ts
+
+# Temporary files
+tmp/
+temp/
+
+# Package lock files (if using npm)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage reports
+coverage/
+
+# Cypress and Playwright test outputs
+cypress/videos/
+cypress/screenshots/
+test-results/
+
+# Angular cache
+.nx/
+.angular/cache/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
