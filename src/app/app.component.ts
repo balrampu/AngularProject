@@ -14,4 +14,14 @@ export class AppComponent {
   title = 'first-angular-app';
 
   users = DUMMY_USERS;
+
+  onSelectUser(id:string){
+    console.log('Selected user with id : '+ id)
+  }
+  onSelectUserName(name:string){
+    console.log('Selected user with name : '+ name)
+  }
+  onSelectAvtar(avtar:string){
+    console.log('Selected user with name : '+ avtar)
+  }
 }
