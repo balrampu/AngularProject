@@ -292,7 +292,12 @@
 <app-header/>
 <main>
   <ul id="users">
-    <li><app-user  [user]="users[0]" (selectAvtar)="onSelectAvtar($event)" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
+
+    @for(user of users; track user.id){
+      <li><app-user [user]="user" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
+
+    }
+    <!-- <li><app-user  [user]="users[0]" (selectAvtar)="onSelectAvtar($event)" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
 
     <li><app-user [user]="users[1]" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
 
@@ -301,7 +306,8 @@
 
 
     <li><app-user [user]="users[3]"  (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)"  /></li>
-
+ -->
+    
 
 
 
