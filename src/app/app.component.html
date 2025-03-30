@@ -292,18 +292,19 @@
 <app-header/>
 <main>
   <ul id="users">
-    <li><app-user [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" (selectAvtar)="onSelectAvtar($event)" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
+    <li><app-user  [user]="users[0]" (selectAvtar)="onSelectAvtar($event)" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
 
-    <li><app-user [id]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
-
-
-    <li><app-user [id]="users[2].id" [avatar]="users[2].avatar" [name]="users[2].name" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
+    <li><app-user [user]="users[1]" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
 
 
-    <li><app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)"  /></li>
+    <li><app-user [user]="users[2]"  (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)" /></li>
+
+
+    <li><app-user [user]="users[3]"  (selectName)="onSelectUserName($event)" (select)="onSelectUser($event)"  /></li>
 
 
 
 
   </ul>
+  <app-tasks [name]="selectedUser ? selectedUser.name : ''"/>
 </main>
