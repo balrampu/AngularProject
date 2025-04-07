@@ -4,16 +4,13 @@ import { Component , EventEmitter, Input , Output, output , computed,input } fro
 //     avatar : string;
 //     name : string;
 // }
+import { User } from './user.model';
+import { CardComponent } from "../shared/card/card.component";
 
-interface   User {
-       id: string;
-       avatar : string;
-       name : string;
-   }
    
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -37,7 +34,7 @@ export class UserComponent {
   //  imagePath= computed( ()=>{
   //   return "assets/users/users/" + this.avatar();
   //  } );
-
+  @Input({required:true}) selected!:boolean;
   @Output() select = new EventEmitter();
   @Output() selectName = new EventEmitter();
             selectAvtar = output<string>();
